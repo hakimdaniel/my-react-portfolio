@@ -102,12 +102,11 @@ function App() {
             </div>
           </div>
         </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+<Routes>
+  <Route path="/my-react-portfolio/" element={<Home/>}/>
+  <Route path="/my-react-portfolio/about" element={<About/>}/>
+  <Route path="/my-react-portfolio/contact" element={<Contact/>}/>
+</Routes>
       </Router>
       <Footer />
     </>
