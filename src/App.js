@@ -69,7 +69,7 @@ function Footer() {
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/my-react-portfolio">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/#/">H4K1M</Link>
