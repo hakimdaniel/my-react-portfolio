@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import './App.css';
 
 function Home(){
@@ -27,9 +27,9 @@ function Footer(){
     <div className="container">
   <footer className="py-3 my-4">
     <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-      <li className="nav-item"><a href="/" className="nav-link px-2 text-body-secondary">Home</a></li>
-      <li className="nav-item"><a href="/about" className="nav-link px-2 text-body-secondary">About</a></li>
-      <li className="nav-item"><a href="/contact" className="nav-link px-2 text-body-secondary">Contact</a></li>
+      <li className="nav-item"><a href="/my-react-portfolio" className="nav-link px-2 text-body-secondary">Home</a></li>
+      <li className="nav-item"><a href="/my-react-portfolio/about" className="nav-link px-2 text-body-secondary">About</a></li>
+      <li className="nav-item"><a href="/my-react-portfolio/contact" className="nav-link px-2 text-body-secondary">Contact</a></li>
       <li className="nav-item"><a href="https://github.com/hakimdaniel" target='_blank' className="nav-link px-2 text-body-secondary"><i class="bi bi-github"></i></a></li>
     </ul>
     <p className="text-center text-body-secondary">© {new Date().getFullYear()} community</p>
@@ -70,7 +70,7 @@ function App(){
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link" to="/">Home</a>
+          <Link className="nav-link" to="/">Home</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/about">About</Link>
