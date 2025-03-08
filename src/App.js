@@ -22,6 +22,15 @@ function About(){
   )
 }
 
+function NotFound(){
+  return (
+    <div className='container p-5'>
+      <h1>404 - Page Not Found</h1>
+      <p>Laman yang anda cari tiada dalam website ini.</p>
+    </div>
+  )
+}
+
 function Footer(){
   return (
     <div className="container">
@@ -30,7 +39,9 @@ function Footer(){
       <li className="nav-item"><a href="/my-react-portfolio" className="nav-link px-2 text-body-secondary">Home</a></li>
       <li className="nav-item"><a href="/my-react-portfolio/about" className="nav-link px-2 text-body-secondary">About</a></li>
       <li className="nav-item"><a href="/my-react-portfolio/contact" className="nav-link px-2 text-body-secondary">Contact</a></li>
-      <li className="nav-item"><a href="https://github.com/hakimdaniel" target='_blank' className="nav-link px-2 text-body-secondary"><i class="bi bi-github"></i></a></li>
+      <li className="nav-item"><a href="https://github.com/hakimdaniel" target='_blank' rel="noopener noreferrer">
+  <i className="bi bi-github"></i>
+</a></li>
     </ul>
     <p className="text-center text-body-secondary">© {new Date().getFullYear()} community</p>
   </footer>
@@ -60,7 +71,7 @@ function Contact(){
 
 function App(){
   return (<>
-    <Router>
+    <Router basename="/my-react-portfolio">
 <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
     <Link className="navbar-brand" to="/">H4K1M</Link>
@@ -70,13 +81,13 @@ function App(){
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link" to="/">Home</Link>
+          <Link className="nav-link" to="#/">Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/about">About</Link>
+          <Link className="nav-link" to="#/about">About</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/contact">Contact</Link>
+          <Link className="nav-link" to="#/contact">Contact</Link>
         </li>
       </ul>
     </div>
@@ -89,6 +100,7 @@ function App(){
           path="/about" element={<About/>}/>
         <Route
           path="/contact" element={<Contact/>}/>
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
     </Router>
     <Footer/></>
